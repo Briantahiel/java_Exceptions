@@ -13,6 +13,9 @@ public class Flow{
         System.out.println("Start method2");
         for(int i = 1; i <= 5; i++){
             System.out.println(i);
+            int num = 0;
+            int result = i/num;
+            System.out.println(result);
         }
         System.out.println("End method2");
     }
