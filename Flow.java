@@ -8,6 +8,12 @@ public class Flow {
     private static void method1() {
         System.out.println("Start method1");
         method2();
+        try{
+           method3(); 
+        }catch(MyException myException){
+            myException.printStackTrace();
+        }
+        
         System.out.println("End method1");
     }
 
@@ -25,6 +31,14 @@ public class Flow {
             }
         }
         System.out.println("End method2");
+    }
+    private static void method3(){
+        System.out.println("Start method2");
+        // ArithmeticException exception = new ArithmeticException();
+        // throw new ArithmeticException("Something went wrong!");
+        throw new MyException("Something went wrong");
+        // System.out.println("End method2");
+        // System.out.println(exception);
     }
     
 }
