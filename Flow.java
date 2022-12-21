@@ -1,11 +1,11 @@
 public class Flow {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyException{
         System.out.println("Start main");
         method1();
         System.out.println("End main");
     }
 
-    private static void method1() {
+    private static void method1() throws MyException{
         System.out.println("Start method1");
         method2();
         try{
@@ -32,7 +32,7 @@ public class Flow {
         }
         System.out.println("End method2");
     }
-    private static void method3(){
+    private static void method3() throws MyException{
         System.out.println("Start method2");
         // ArithmeticException exception = new ArithmeticException();
         // throw new ArithmeticException("Something went wrong!");
