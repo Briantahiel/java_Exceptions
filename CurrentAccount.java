@@ -3,9 +3,9 @@ public class CurrentAccount extends Account{
         super(agency, number);
     }
     @Override
-    public boolean withdrawal(double value) {
+    public void withdrawal(double value) throws NoBalanceException{
         double commission = 0.2;
-        return super.withdrawal(value + commission);
+        super.withdrawal(value + commission);
     }
     @Override
     public void deposit(double value) {

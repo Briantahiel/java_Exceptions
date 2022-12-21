@@ -1,7 +1,11 @@
 public class Flow {
-    public static void main(String[] args) throws MyException{
+    public static void main(String[] args){
         System.out.println("Start main");
-        method1();
+        try {
+            method1();
+        } catch (MyException e) {
+            e.printStackTrace();
+        }
         System.out.println("End main");
     }
 

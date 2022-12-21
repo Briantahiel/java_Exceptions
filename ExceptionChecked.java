@@ -6,7 +6,5 @@ public class ExceptionChecked {
         } catch (MyException e) {
             e.printStackTrace();
         }
-        
-        
     }
 }

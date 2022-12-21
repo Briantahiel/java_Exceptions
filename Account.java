@@ -1,6 +1,6 @@
 public abstract class Account {
     protected double balance;
-    private int agency;
+    private int agency = 1;
     private int number;
     private Client owner = new Client();
 
@@ -24,14 +24,21 @@ public abstract class Account {
     //     this.balance += value;
     // }
      // This method does return a value.
-    public boolean withdrawal(double value){
-        if(this.balance >= value){
+    public void withdrawal(double value) throws NoBalanceException{
+        // if(this.balance >= value){
+        if(this.balance < value){
+            try {
+                throw new NoBalanceException("No balance");
+            } catch (NoBalanceException e) {
+                e.printStackTrace();
+            }
+        }
             this.balance -= value;
-            return true;
-        }
-        else{
-            return false;
-        }
+        //     return true;
+        // }
+        // else{
+        //     return false;
+        // }
     }
     public boolean transfer(double value, Account account){
        if(this.balance >= value){
